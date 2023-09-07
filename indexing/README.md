@@ -1,4 +1,4 @@
-Toolforge Imagehash web API 
+Toolforge Imagehash batch job indexing code. 
 
 ### Running standalone
 
