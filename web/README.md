@@ -1,13 +1,15 @@
 This is web interface for ImageHash-Toolforge which is used to detect if image already exists in Wikimedia Commons.
 
-Howto install to toolforge
+Howto install Flask app to toolforge
 - https://wikitech.wikimedia.org/wiki/Help:Toolforge/My_first_Flask_OAuth_tool
 
 Prerequisites
+```
 # Create toolforge account and request access to imagehash project
 # First login to toolforge 
-
-Then 
+```
+Install & run
+```
 # become imagehash
 # mkdir -p $HOME/www/python
 # cd $HOME/www/python
@@ -20,17 +22,22 @@ Then
 # pip install -r $HOME/www/python/src/requirements.txt
 # deactivate
 # webservice --backend=kubernetes python3.11 start
+```
 
-Updating pip packages
+Update pip
+```
 # webservice --backend=kubernetes python3.11 shell
 # source $HOME/www/python/venv/bin/activate
 # pip install packagename
 # deactivate
+```
 
-Updating code
+Update code
+```
 # cd $HOME/www/python/ImageHash-Toolforge/web
 # nano app.py
 # webservice restart
+```
 
 Log files
 - $HOME/uwsgi.log
