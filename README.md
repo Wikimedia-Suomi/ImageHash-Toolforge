@@ -1,18 +1,18 @@
 # ImageHash-Toolforge
 Tool uses image hashing to detect if image already exists in Wikimedia Commons.
 
-Directories
+### Directories
 
 - [web](./web) -- web API code, made with Flask, Vue, imagehash, Toolforge
 - [indexing](./indexing) -- batchjob indexing code (pywikibot, mariadb)
 - [database](./database) -- database schema 
 
-References
+### References
 - Perceptual hashing ([pHashref](http://www.hackerfactor.com/blog/index.php?/archives/432-Looks-Like-It.html))
 - Difference hashing ([dHashref](http://www.hackerfactor.com/blog/index.php?/archives/529-Kind-of-Like-That.html))
 - [Imagehash library](https://github.com/JohannesBuchner/imagehash)  (Python)
 
-Usage
+### Usage
 
 dhash+phash Search
 - phash and dhash are calculated using Python Imagehash library.
