@@ -1,4 +1,6 @@
-Running standalone
+Toolforge Imagehash web API 
+
+### Running standalone
 
 ```
 # python -m venv venv
@@ -9,7 +11,7 @@ Running standalone
 # deactivate
 ```
 
-Running in kubernetes
+### Running in kubernetes
 - https://wikitech.wikimedia.org/wiki/Help:Toolforge/Jobs_framework
 
 Start job
