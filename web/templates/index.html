@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Image Search</title>
+    <!-- Include Vue.js from a CDN -->
+    <script src="{{ url_for('static', filename='js/vue.js')}}"></script>
+</head>
+<body>
+    <div id="app">
+        <app></app>
+    </div>
+    <!-- Include your Vue app -->
+    <script src="{{ url_for('static', filename='js/app.js')}}"></script>
+    <!-- Start Vue.js -->
+    <script>
+        new Vue({
+            el: '#app'
+        });
+    </script>
+</body>
+</html>

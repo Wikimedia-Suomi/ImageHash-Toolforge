@@ -1,0 +1,5 @@
+toolforge 
+imagehash 
+pillow 
+pywikibot
+
