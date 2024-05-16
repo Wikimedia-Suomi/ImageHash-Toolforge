@@ -530,7 +530,7 @@ loopcount = 10
 filter_param = None
 mode = 'page'
 
-category_salt = '20240516'
+category_salt = '20240516b'
 
 # Just tracking last processed id in database
 category = f'{filter_param}_{mode}_{category_salt}'
