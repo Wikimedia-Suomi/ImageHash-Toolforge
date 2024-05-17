@@ -68,5 +68,36 @@ describe status;
 2 rows in set (0.002 sec)
 ```
 
+### Querying the hashes in Mariadb
+
+Query for finding duplicates for images defined by page_id. The maximum difference is an integer representing how many bits can be different when comparing hashes. Smaller value means less difference. Ie. 1 = no difference. 10 = huge difference.
+
+```
+# First use phash as reference point
+
+    SELECT p1.commons AS commons1, p2.commons AS commons2, BIT_COUNT(d1.hash ^ d2.hash) AS bit_count
+    FROM phash AS p1, dhash AS d1, phash AS p2, dhash AS d2 
+    WHERE
+    p1.commons=d1.commons
+    AND p1.commons = %(page_id)s
+    AND p1.hash=p2.hash
+    AND p2.commons=d2.commons
+    AND BIT_COUNT(d1.hash ^ d2.hash) < %(maxdifference)s
+
+    UNION
+
+    # Then same query but using dhash as reference point
+
+    SELECT p1.commons AS commons1, p2.commons AS commons2, BIT_COUNT(p1.hash ^ p2.hash) AS bit_count
+    FROM phash AS p1, dhash AS d1, phash AS p2, dhash AS d2
+    WHERE
+    p1.commons=d1.commons
+    AND d1.commons = %(page_id)s
+    AND d1.hash=d2.hash
+    AND p2.commons=d2.commons
+    AND BIT_COUNT(p1.hash ^ p2.hash) < %(maxdifference)s
+```
+
+
 
 
