@@ -13,7 +13,11 @@ app = Flask(__name__, static_folder='/data/project/imagehash/www/python/src/stat
 commons_conn = toolforge.connect('commonswiki_p', cursorclass=pymysql.cursors.DictCursor)
 tools_conn = toolforge.toolsdb('s55462__imagehash', cursorclass=pymysql.cursors.DictCursor)
 
-
+@app.after_request
+def add_cors_headers(response):
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    return response
+    
 # Perceptual hashing 
 # http://www.hackerfactor.com/blog/index.php?/archives/432-Looks-Like-It.html
 
