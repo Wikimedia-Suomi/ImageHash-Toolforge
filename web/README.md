@@ -1,5 +1,8 @@
 This is web interface for ImageHash-Toolforge which is used to detect if image already exists in Wikimedia Commons.
 
+Homepage
+- https://imagehash.toolforge.org
+
 Howto install Flask app to toolforge
 - https://wikitech.wikimedia.org/wiki/Help:Toolforge/My_first_Flask_OAuth_tool
 
