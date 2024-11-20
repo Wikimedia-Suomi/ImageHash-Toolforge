@@ -1,6 +1,12 @@
 # ImageHash-Toolforge
 Tool uses image hashing to detect if image already exists in Wikimedia Commons. 
 
+Web interface
+- https://imagehash.toolforge.org
+
+#### Status 20.11.2024 ####
+Phash and dhash index size is 95M photos of 100M photos in Wikimedia Commons. 
+
 #### Status 7.9.2023
 Phash and dhash index size is 14M photos of 85M photos in Wikimedia Commons. The index covers jpg, tiff webp images from Flickr, Finna, Europeana, and most of the photos from Nordic and Baltic countries. 
 
